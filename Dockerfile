@@ -5,7 +5,7 @@ WORKDIR /app
 COPY pyproject.toml .python-version README.md /app/
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends curl clang libldap2-dev libsasl2-dev libssl-dev && \
+    apt-get install -y --no-install-recommends curl && \
     rm -rf /var/lib/apt/lists/*
 
 ENV RYE_HOME="/opt/rye"
